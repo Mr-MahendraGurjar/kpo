@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import 'custom_button.dart';
+import 'custom_text.dart';
+
 class ContactUsWidget extends StatefulWidget {
   const ContactUsWidget({Key key}) : super(key: key);
 
@@ -13,38 +16,51 @@ class _ContactUsWidgetState extends State<ContactUsWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child:
-          Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+      child: Column(children: [
         Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text("1 Hour Free Consultation",
-                      style: TextStyle(color: Colors.white)),
-                  const Text(
-                      "You can give us one job that is up to 8 hours of \nwork that we will do,FREE, \nso you can evaluate our\n service risk-free.",
-                      style: TextStyle(color: Colors.white)),
-                  const SizedBox(
-                    height: 10,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomText(
+                    text: '1 Hour Free Consultation',
+                    size: 14,
+                    color: Color(0xff0093FE),
+                    fontWeight: FontWeight.w300,
+                    fontFamily: 'popins'),
+                CustomText(
+                    text:
+                        'You can give us one job that is up to 8 hours of \nwork that we will do,FREE, \nso you can evaluate our\n service risk-free.',
+                    size: 14,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w300,
+                    fontFamily: 'popins'),
+
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: CustomButton(
+                    text: 'Schedule Free Consultation',
+                    width: 120,
                   ),
-                  FlatButton(
-                    color: const Color(0xff0093FE),
-                    onPressed: () {},
-                    child: const Text(
-                      "Schedule Free Consultation",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+                // FlatButton(
+                //   color: const Color(0xff0093FE),
+                //   onPressed: () {},
+                //   child: const Text(
+                //     "Schedule Free Consultation",
+                //     style: TextStyle(color: Colors.white),
+                //   ),
+                // ),
+              ],
             ),
-            const Icon(
-              Icons.calendar_view_month_outlined,
-              size: 500,
+            Image.asset(
+              'assets/calender.png',
+              height: 300,
+              width: 300,
             ),
           ],
         ),

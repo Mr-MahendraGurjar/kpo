@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kpo/routes/route_path.dart';
 import 'package:kpo/screens/about_us.dart';
 import 'package:kpo/screens/contact_us_screen.dart';
 import 'package:kpo/screens/home_page.dart';
 import 'package:kpo/screens/pricing_screen.dart';
+import 'package:kpo/screens/services_screen.dart';
 import 'package:kpo/widgets/blog_article_horixontal.dart';
 import 'package:kpo/widgets/blog_article_verticle.dart';
 import 'package:kpo/widgets/custom_button.dart';
@@ -52,12 +52,17 @@ class _BlogScreenState extends State<BlogScreen> {
               SizedBox(
                 width: 20,
               ),
-              CustomText(
-                text: 'Services',
-                size: 14,
-                color: Colors.black,
-                fontWeight: FontWeight.w300,
-                fontFamily: 'popins',
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(ServicesScreen.route);
+                },
+                child: CustomText(
+                  text: 'Services',
+                  size: 14,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w300,
+                  fontFamily: 'popins',
+                ),
               ),
               SizedBox(
                 width: 20,

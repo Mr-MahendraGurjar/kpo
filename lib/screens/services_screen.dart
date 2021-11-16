@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:kpo/screens/about_us.dart';
 import 'package:kpo/screens/pricing_screen.dart';
-import 'package:kpo/screens/services_screen.dart';
-import 'package:kpo/widgets/contact_details_widget.dart';
-import 'package:kpo/widgets/contact_us_widget.dart';
 import 'package:kpo/widgets/custom_button.dart';
 import 'package:kpo/widgets/custom_text.dart';
-import 'package:kpo/widgets/quote_widget_screen.dart';
+import 'package:kpo/widgets/top_widget.dart';
 
+import 'about_us.dart';
+import 'contact_us_screen.dart';
 import 'home_page.dart';
 
-class ContactUsScreen extends StatefulWidget {
-  static const String route = '/ContactUs';
-  const ContactUsScreen({Key key}) : super(key: key);
+class ServicesScreen extends StatefulWidget {
+  static const String route = '/services';
+  const ServicesScreen({Key key}) : super(key: key);
 
   @override
-  _ContactUsScreenState createState() => _ContactUsScreenState();
+  _ServicesScreenState createState() => _ServicesScreenState();
 }
 
-class _ContactUsScreenState extends State<ContactUsScreen> {
+class _ServicesScreenState extends State<ServicesScreen> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -130,20 +128,19 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
               ),
             ],
           )),
-      body: SingleChildScrollView(
-        child: Container(
-          color: const Color(0xffE5E5E5),
-          child: Column(
-            children: [
-              ContactUsWidget(),
-              ContactDetailsWidget(),
-              QuoteWidgetScreen(),
-              SizedBox(
-                height: 50,
-              ),
-              Image.asset('assets/footer_page.png'),
-            ],
-          ),
+      body: Container(
+        color: const Color(0xffE5E5E5),
+        child: Column(
+          children: [
+            TopWidget(),
+            // ServicesInclude(),
+            // CfoService(),
+            // StaffingSolution(),
+            SizedBox(
+              height: 50,
+            ),
+            Image.asset('assets/footer_page.png'),
+          ],
         ),
       ),
     );
