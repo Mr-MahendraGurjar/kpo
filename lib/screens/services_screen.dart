@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kpo/screens/pricing_screen.dart';
+import 'package:kpo/widgets/cfo_services_widget.dart';
 import 'package:kpo/widgets/custom_button.dart';
 import 'package:kpo/widgets/custom_text.dart';
+import 'package:kpo/widgets/services_include.dart';
 import 'package:kpo/widgets/top_widget.dart';
 
 import 'about_us.dart';
@@ -128,19 +130,35 @@ class _ServicesScreenState extends State<ServicesScreen> {
               ),
             ],
           )),
-      body: Container(
-        color: const Color(0xffE5E5E5),
-        child: Column(
-          children: [
-            TopWidget(),
-            // ServicesInclude(),
-            // CfoService(),
-            // StaffingSolution(),
-            SizedBox(
-              height: 50,
+      body: SingleChildScrollView(
+        child: Container(
+          color: const Color(0xffE5E5E5),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              //mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                TopWidget(),
+                SizedBox(
+                  height: 30,
+                ),
+                ServicesInclude(),
+                SizedBox(
+                  height: 30,
+                ),
+                CfoService(),
+                // SizedBox(
+                //   height: 30,
+                // ),
+                // StaffingSolution(),
+                SizedBox(
+                  height: 50,
+                ),
+                Image.asset('assets/footer_page.png'),
+              ],
             ),
-            Image.asset('assets/footer_page.png'),
-          ],
+          ),
         ),
       ),
     );

@@ -15,6 +15,7 @@ class _ServicesIncludeState extends State<ServicesInclude> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomText(
           text: "Service Includes:",
