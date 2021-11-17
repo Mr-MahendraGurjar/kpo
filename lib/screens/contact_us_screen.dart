@@ -23,6 +23,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color(0xffF5FCFF),
       appBar: PreferredSize(
           preferredSize: Size(screenSize.width, 500),
           child: Row(
@@ -64,16 +65,6 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                   fontFamily: 'popins',
                 ),
               ),
-              SizedBox(
-                width: 20,
-              ),
-              CustomText(
-                text: 'Partner Program',
-                size: 14,
-                color: Colors.black,
-                fontWeight: FontWeight.w300,
-                fontFamily: 'popins',
-              ),
               SizedBox(width: 20),
               GestureDetector(
                 onTap: () {
@@ -97,7 +88,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 child: CustomText(
                     text: 'Contact Us',
                     size: 14,
-                    color: Colors.black,
+                    color: Color(0xff0093FE),
                     fontWeight: FontWeight.w300,
                     fontFamily: 'popins'),
               ),
@@ -109,7 +100,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 child: CustomText(
                   text: 'Blog Us',
                   size: 14,
-                  color: Color(0xff0093FE),
+                  color: Colors.black,
                   fontWeight: FontWeight.w300,
                   fontFamily: 'popins',
                 ),
@@ -132,14 +123,14 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           )),
       body: SingleChildScrollView(
         child: Container(
-          color: const Color(0xffE5E5E5),
+          color: Color(0xffF5FCFF),
           child: Column(
             children: [
               ContactUsWidget(),
               ContactDetailsWidget(),
               QuoteWidgetScreen(),
               SizedBox(
-                height: 50,
+                height: 20,
               ),
               Image.asset('assets/footer_page.png'),
             ],

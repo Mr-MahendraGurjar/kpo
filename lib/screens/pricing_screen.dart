@@ -84,7 +84,7 @@ class _PricingScreenState extends State<PricingScreen> {
                 child: CustomText(
                   text: 'Pricing',
                   size: 14,
-                  color: Colors.black,
+                  color: Color(0xff0093FE),
                   fontWeight: FontWeight.w300,
                   fontFamily: 'popins',
                 ),
@@ -111,7 +111,7 @@ class _PricingScreenState extends State<PricingScreen> {
                 child: CustomText(
                   text: 'Blog Us',
                   size: 14,
-                  color: Color(0xff0093FE),
+                  color: Colors.black,
                   fontWeight: FontWeight.w300,
                   fontFamily: 'popins',
                 ),
