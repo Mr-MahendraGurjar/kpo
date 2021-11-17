@@ -20,16 +20,26 @@ class _TopWidgetState extends State<TopWidget> {
       children: [
         CustomText(
           text: "Accounting & Bookkeeing Solution",
-          fontFamily: popins,
+          fontFamily: playfair,
           color: Color(0xff0093FE),
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w700,
           size: 20,
         ),
         CustomText(
           text: Constants.Static_Data,
           fontFamily: popins,
-          color: CupertinoColors.black,
-          fontWeight: FontWeight.w200,
+          color: Color(0xff2E2E2E),
+          fontWeight: FontWeight.w300,
+          size: 15,
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        CustomText(
+          text: Constants.Static_Data_One,
+          fontFamily: popins,
+          color: Color(0xff2E2E2E),
+          fontWeight: FontWeight.w300,
           size: 15,
         ),
       ],

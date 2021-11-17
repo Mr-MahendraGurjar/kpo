@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kpo/widgets/custom_bullet_dart.dart';
 import 'package:kpo/widgets/fonts.dart';
-import 'package:kpo/widgets/pricing_plans.dart';
+import 'package:kpo/widgets/services_card_widget.dart';
 
+import 'custom_bullet_dart.dart';
 import 'custom_text.dart';
 
 class StaffingSolution extends StatefulWidget {
@@ -18,13 +18,18 @@ class _StaffingSolutionState extends State<StaffingSolution> {
     return Padding(
       padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(
+            height: 50,
+          ),
           CustomText(
             text: "Staffing Solution",
             fontFamily: playfair,
             color: Color(0xff0093FE),
             fontWeight: FontWeight.w600,
-            size: 20,
+            size: 30,
           ),
           CustomText(
             text: "Hire Virtual Bookkeeper & Accountant in India",
@@ -33,40 +38,54 @@ class _StaffingSolutionState extends State<StaffingSolution> {
             fontWeight: FontWeight.w300,
             size: 20,
           ),
+          SizedBox(
+            height: 50,
+          ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                children: [
-                  CustomText(
-                    text: "Our Job",
-                    fontFamily: playfair,
-                    color: Color(0xff0093FE),
-                    fontWeight: FontWeight.w600,
-                    size: 20,
-                  ),
-                  BulletList([
-                    'Provide General Software Training & Updates.',
-                    ' Provide a safe & healthy office environment & infrastructure.',
-                    ' Provide top notch infrastrcuture and ensure highest data security standards.',
-                    ' Run payroll, invoice the hours worked.   '
-                  ]),
-                ],
+              Expanded(
+                flex: 1,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    CustomText(
+                      text: "Our Job",
+                      fontFamily: popins,
+                      color: Color(0xff0093FE),
+                      fontWeight: FontWeight.w600,
+                      size: 20,
+                    ),
+                    BulletList([
+                      'Provide General Software Training & Updates.',
+                      ' Provide a safe & healthy office environment & infrastructure.',
+                      ' Provide top notch infrastrcuture and ensure highest data security standards.',
+                      ' Run payroll, invoice the hours worked.   '
+                    ]),
+                  ],
+                ),
               ),
-              Column(
-                children: [
-                  CustomText(
-                    text: "Your Job",
-                    fontFamily: playfair,
-                    color: Color(0xff0093FE),
-                    fontWeight: FontWeight.w600,
-                    size: 20,
-                  ),
-                  BulletList([
-                    'Provide training on your internal processes & establish a flow of communication.',
-                    ' Manage workflow when the employee is unavailable/absent.',
-                    'Record the workflows, processes to ensure continuity in case of a change of hand.'
-                  ]),
-                ],
+              Expanded(
+                flex: 1,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    CustomText(
+                      text: "Your Job",
+                      fontFamily: popins,
+                      color: Color(0xff0093FE),
+                      fontWeight: FontWeight.w600,
+                      size: 20,
+                    ),
+                    BulletList([
+                      'Provide training on your internal processes & establish a flow of communication.',
+                      ' Manage workflow when the employee is unavailable/absent.',
+                      'Record the workflows, processes to ensure continuity in case of a change of hand.'
+                    ]),
+                  ],
+                ),
               ),
             ],
           ),
@@ -86,7 +105,7 @@ class _StaffingSolutionState extends State<StaffingSolution> {
                       height: 20,
                     ),
                     CustomText(
-                      text: "Pricing Plans",
+                      text: "Process",
                       fontFamily: popins,
                       color: Color(0xff0093FE),
                       fontWeight: FontWeight.w600,
@@ -99,80 +118,27 @@ class _StaffingSolutionState extends State<StaffingSolution> {
                       padding: const EdgeInsets.only(
                           left: 16.0, right: 16.0, top: 16.0, bottom: 16.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Expanded(
-                            child: Container(
-                              height: MediaQuery.of(context).size.height * 0.6,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                  color: Colors.white,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  10.0,
-                                ),
-                              ),
-                              child: PricingPlans(
-                                description:
-                                    'Our services include setting up charts of\naccounts, recording of receipts, recording\ninvoices from suppliers, ledger\nmaintenance, cash-flow, bank\nreconciliations, accounts payable,accounts\nreceivable, payroll processing, sales tax\nfiling and financial reporting.',
-                                title: 'Virtual CFO',
-                                rate: '15/Hour',
-                                icon: 'assets/pc2.png',
-                                text: 'Starting at',
-                              ),
-                            ),
+                          ServicesCardWidget(
+                            size: 0.5,
+                            titleText:
+                                'you submit a requirement to us for the \njob profile, work domain, expertise \n expected ',
+                            image: 'assets/book.png',
                           ),
-                          const SizedBox(
-                            width: 5,
+                          ServicesCardWidget(
+                            size: 0.5,
+                            titleText:
+                                'we do the talent hunt here in India,\n find relevant resumes for you to video\n interview & select',
+                            image: 'assets/working_man.png',
                           ),
-                          Expanded(
-                            child: Container(
-                              height: MediaQuery.of(context).size.height * 0.6,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                  color: Colors.white,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  10.0,
-                                ),
-                              ),
-                              child: PricingPlans(
-                                description:
-                                    'Our services include setting up charts of\naccounts, recording of receipts, recording\ninvoices from suppliers, ledger\nmaintenance, cash-flow, bank\nreconciliations, accounts payable,accounts\nreceivable, payroll processing, sales tax\nfiling and financial reporting.',
-                                title: 'Virtual CFO',
-                                rate: '15/Hour',
-                                icon: 'assets/pc2.png',
-                                text: 'Starting at',
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Expanded(
-                            child: Container(
-                              height: MediaQuery.of(context).size.height * 0.6,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                  color: Colors.white,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  10.0,
-                                ),
-                              ),
-                              child: const PricingPlans(
-                                description:
-                                    'Service include manage bank relationships,\nweekly meetings, business forecasting,\ncompany-wide KPIs, and more, all at a\nfraction of the cost of a full-time CFO.',
-                                title: 'Staffing Solution',
-                                rate: '20/Hour',
-                                icon: 'assets/pc3.png',
-                                text: 'Starting at',
-                              ),
-                            ),
-                          ),
+                          ServicesCardWidget(
+                            size: 0.5,
+                            titleText:
+                                'Employee signs NDA and can start\n training & working right away ',
+                            image: 'assets/leader.png',
+                          )
                         ],
                       ),
                     ),

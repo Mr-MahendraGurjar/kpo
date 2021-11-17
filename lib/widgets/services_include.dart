@@ -15,6 +15,7 @@ class _ServicesIncludeState extends State<ServicesInclude> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomText(
@@ -34,6 +35,67 @@ class _ServicesIncludeState extends State<ServicesInclude> {
           ' Preparing Financial Statements and Management Reports (includingtracking KPIs, Trend analysis).',
           ' Preparing Projections and Budgets, Variance Analysis. '
         ]),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Color(0xffDBF3FF),
+            ),
+            child: Padding(
+              padding:
+                  const EdgeInsets.only(left: 16.0, right: 10.0, top: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  CustomText(
+                      text:
+                          'We integrate with a ton of apps. Here are a few... ',
+                      size: 20,
+                      color: Color(0xff0093FE),
+                      fontWeight: FontWeight.w600,
+                      fontFamily: popins),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 170.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset('assets/image_1.png'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Image.asset('assets/image_2.png'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Image.asset('assets/image_3.png'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Image.asset('assets/image_4.png'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Image.asset('assets/image_5.png'),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 70,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 70,
+        ),
       ],
     );
   }

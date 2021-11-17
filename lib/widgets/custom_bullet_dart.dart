@@ -34,7 +34,8 @@ class BulletList extends StatelessWidget {
                     softWrap: true,
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.black.withOpacity(0.6),
+                      fontWeight: FontWeight.w300,
+                      color: Color(0xff2E2E2E),
                       height: 1.55,
                     ),
                   ),

@@ -3,7 +3,9 @@ import 'package:kpo/screens/pricing_screen.dart';
 import 'package:kpo/widgets/cfo_services_widget.dart';
 import 'package:kpo/widgets/custom_button.dart';
 import 'package:kpo/widgets/custom_text.dart';
+import 'package:kpo/widgets/quote_widget_screen.dart';
 import 'package:kpo/widgets/services_include.dart';
+import 'package:kpo/widgets/staffing_solution.dart';
 import 'package:kpo/widgets/top_widget.dart';
 
 import 'about_us.dart';
@@ -23,6 +25,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Color(0xffF5FCFF),
       appBar: PreferredSize(
           preferredSize: Size(screenSize.width, 500),
           child: Row(
@@ -132,7 +135,7 @@ class _ServicesScreenState extends State<ServicesScreen> {
           )),
       body: SingleChildScrollView(
         child: Container(
-          color: const Color(0xffE5E5E5),
+          color: Color(0xffF5FCFF),
           child: Padding(
             padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
             child: Column(
@@ -148,10 +151,14 @@ class _ServicesScreenState extends State<ServicesScreen> {
                   height: 30,
                 ),
                 CfoService(),
-                // SizedBox(
-                //   height: 30,
-                // ),
-                // StaffingSolution(),
+                SizedBox(
+                  height: 30,
+                ),
+                StaffingSolution(),
+                SizedBox(
+                  height: 30,
+                ),
+                QuoteWidgetScreen(),
                 SizedBox(
                   height: 50,
                 ),

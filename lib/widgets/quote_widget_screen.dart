@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kpo/widgets/fonts.dart';
 
+import 'custom_button.dart';
 import 'custom_text.dart';
 
 class QuoteWidgetScreen extends StatefulWidget {
@@ -180,8 +182,8 @@ class _QuoteWidgetScreenState extends State<QuoteWidgetScreen> {
                               labelStyle: TextStyle(color: Color(0xff484848)),
                               hintStyle: TextStyle(color: Color(0xff484848)),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    width: 3, color: Colors.white),
+                                borderSide:
+                                    BorderSide(width: 3, color: Colors.white),
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               focusedBorder: OutlineInputBorder(
@@ -192,10 +194,28 @@ class _QuoteWidgetScreenState extends State<QuoteWidgetScreen> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    CustomText(
+                      text:
+                          "Please write us your requirements here and we will contact you shortly on your provided\n email ID with an estimated quote",
+                      fontFamily: popins,
+                      color: Color(0xff484848),
+                      fontWeight: FontWeight.w400,
+                      size: 20,
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Center(
+                        child: CustomButton(width: 220, text: 'Get A Quote')),
                   ],
                 ),
               ),
-              SizedBox(height: 30,)
+              SizedBox(
+                height: 30,
+              )
             ],
           ),
         ),
